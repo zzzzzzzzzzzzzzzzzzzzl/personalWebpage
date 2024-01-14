@@ -1,0 +1,194 @@
+body,
+html {
+  margin: 0px;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: 'Courier New', monospace;
+  height: 100%;
+}
+
+.navBar {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(60, 60, 60);
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid rgb(71, 71, 71);
+}
+.nav {
+  font-family: 'hehe', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(199, 199, 199);
+}
+
+.navBarChildren:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+.navBarChildren {
+  padding: 8px;
+}
+.sat {
+  filter: saturate(0);
+}
+.navBarImg:hover {
+  filter: saturate(0%);
+  filter: brightness(150%);
+}
+
+.border {
+  border-bottom: 1x solid rgb(60, 60, 60);
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+.parent:hover .border {
+  border-bottom: 2px solid rgb(80, 80, 80);
+}
+
+.comment {
+  color: rgb(143, 143, 143);
+}
+
+.comment::before {
+  content: '\003C'; /* Unicode for '<' */
+  display: inline;
+}
+.comment::after {
+  content: '\003E';
+  display: inline-block;
+}
+.tag {
+  color: rgb(168, 199, 250);
+}
+
+.html {
+  color: rgb(168, 199, 250);
+}
+.html::before {
+  color: rgb(94, 172, 248);
+  content: '\003C html\003E\0020';
+  display: inline;
+}
+#root {
+  height: 100%;
+  width: 100%;
+}
+.html::after {
+  color: rgb(94, 172, 248);
+  content: '\200B\003C/html\003E';
+  display: inline-block;
+}
+.rightSideContent {
+  height: 99.9%;
+  border-bottom: 1px solid rgb(71, 71, 71);
+
+  background-color: rgb(40, 40, 40);
+  border-left: 1px solid rgb(71, 71, 71);
+}
+.topRightSideContent {
+  border-bottom: 1px solid rgb(71, 71, 71);
+}
+.elements {
+  height: 300px;
+  padding: 8px;
+}
+.bottomElements {
+  padding: 8px;
+  padding-bottom: 8px;
+}
+.leftNavChild {
+}
+.resizable {
+  background-color: red;
+}
+
+.leftNavChild:hover {
+  border-radius: 5px;
+  background-color: rgb(62, 62, 62);
+}
+@font-face {
+  font-family: 'hehe'; /* Choose a name for your font */
+  src: url('fonts/hem.ttf') format('truetype'); /* Path to your TTF file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.resizable-div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #333;
+  overflow: hidden;
+  resize: both;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* leftside------------------------- */
+.leftSideContent {
+  height: 88.45%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.gridItem {
+  color: black;
+  background-color: rgb(40, 40, 40);
+}
+.gridItem:hover {
+  background-color: rgb(62, 63, 64);
+}
+.leftSideContent > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container > div {
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px;
+}
+.f {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+}
+
+.color-e :hover {
+  background-color: black;
+}
+.a1 {
+  background-color: #3498db;
+}
+.a2 {
+  background-color: #2ecc71;
+}
+.a3 {
+  background-color: #e74c3c;
+}
+.a4 {
+  background-color: #f39c12;
+}
+.a5 {
+  background-color: #49b4db;
+}
+.a6 {
+  background-color: #9b59b6;
+}
