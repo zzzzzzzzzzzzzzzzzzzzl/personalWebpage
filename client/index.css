@@ -9,7 +9,7 @@ html {
 
 .navBar {
   width: 100%;
-  height: 35px;
+  height: 37px;
   background-color: rgb(60, 60, 60);
   align-items: center;
   display: flex;
@@ -32,6 +32,9 @@ html {
 .sat {
   filter: saturate(0);
 }
+.aha {
+  width: 24px;
+}
 .navBarImg:hover {
   filter: saturate(0%);
   filter: brightness(150%);
@@ -48,6 +51,7 @@ a {
   color: inherit;
 }
 .parent:hover .border {
+  position: absolute;
   border-bottom: 2px solid rgb(80, 80, 80);
 }
 
@@ -85,7 +89,8 @@ a {
   display: inline-block;
 }
 .rightSideContent {
-  height: 99.9%;
+  text-align: left;
+  height: 99.6vh;
   border-bottom: 1px solid rgb(71, 71, 71);
 
   background-color: rgb(40, 40, 40);
@@ -132,7 +137,7 @@ a {
 }
 /* leftside------------------------- */
 .leftSideContent {
-  height: 88.45%;
+  height: 90%;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -146,7 +151,6 @@ a {
 }
 .leftSideContent > div {
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
   font-size: 10px;
 }
 
@@ -168,7 +172,6 @@ a {
   justify-content: center;
   align-items: center;
   display: inline-block;
-  text-align: center;
 }
 
 .color-e :hover {

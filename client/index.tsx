@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
     <Provider store={store}>
       <Router>
-        <div className="test">
-          <App />
-        </div>
+        <App />
       </Router>
     </Provider>
   )

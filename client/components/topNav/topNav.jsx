@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 import err from '../icons/error.png'
 import war from '../icons/warn.png'
@@ -9,6 +10,9 @@ import a3 from '../topNav/topNavImages/3.png'
 import a4 from '../topNav/topNavImages/4.png'
 import a5 from '../topNav/topNavImages/5.png'
 import a6 from '../topNav/topNavImages/6.png'
+import store from '../../store'
+import { toggleDisplay } from '../../slices/slice'
+import { displayToggle } from '../../storeFunctions'
 
 console.log()
 
@@ -20,10 +24,11 @@ function ErrWarn() {
         justifyContent: 'space-between',
         position: 'relative',
         paddingTop: '5px',
+        paddingLeft: '30px',
       }}
     >
-      <img src={err} className="navBarImg" alt="Error" />
-      <img src={war} className="navBarImg" />
+      <img src={err} className="navBarImg aha" alt="Error" />
+      <img src={war} className="navBarImg aha" />
     </div>
   )
 }
@@ -38,11 +43,11 @@ console.warn('eww')
 
 function NavBarImg(props) {
   return (
-    <div>
+    <div className="aha" style={{ width: '10px' }}>
       <img
         src={images[props.imagesIdx]}
-        style={{ padding: '4px' }}
-        className="navBarImg"
+        style={{ padding: '8px', paddingTop: '10px' }}
+        className="navBarImg aha"
       />
     </div>
   )
@@ -114,22 +119,39 @@ function ToggleDevice() {
     saturation = 'sat'
     local = true
   }
-  const [isToggleOn, setIsToggleOn] = useState(local)
-
-  function toggle() {
-    setIsToggleOn(!isToggleOn)
-    localStorage.setItem('toggleDevice', !isToggleOn)
-  }
 
   return (
     <>
-      <div onClick={toggle}>
+      <div onClick={displayToggle}>
         <img
           src={images[1]}
-          style={{ padding: '4px', filter: saturation }}
-          className={`navBarImg ${saturation}`}
+          style={{
+            paddingLeft: '30px',
+            paddingRight: '8px',
+            filter: saturation,
+            paddingTop: '4px',
+          }}
+          className={`navBarImg ${saturation} aha`}
         />
       </div>
+    </>
+  )
+}
+
+function TopBarNavFloatRight() {
+  return (
+    <>
+      <ErrWarn />
+
+      <NavBarImg imagesIdx={3} />
+      <div style={{ padding: '10px' }}></div>
+      <NavBarImg imagesIdx={4} />
+      <div style={{ padding: '10px' }}></div>
+
+      <NavBarImg imagesIdx={5} />
+      <div style={{ paddingLeft: '10px' }}></div>
+
+      <NavBarImg imagesIdx={6} />
     </>
   )
 }
@@ -159,11 +181,8 @@ function TopNav() {
         ))}
         <NavBarImg imagesIdx={2} />
 
-        <ErrWarn />
-        <NavBarImg imagesIdx={3} />
-        <NavBarImg imagesIdx={4} />
-        <NavBarImg imagesIdx={5} />
-        <NavBarImg imagesIdx={6} />
+        <TopBarNavFloatRight />
+
         <div style={{ paddingLeft: '40px' }}></div>
       </div>
     </div>

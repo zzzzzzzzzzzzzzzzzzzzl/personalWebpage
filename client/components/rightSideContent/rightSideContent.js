@@ -5,7 +5,7 @@ import TopNav from '../topNav/topNav'
 import React from 'react'
 export function RightSideContent() {
   return (
-    <div className="">
+    <div className="rightSideContent">
       <div style={{ borderBottom: '1px solid rgb(71, 71, 71)' }}>
         <TopNav />
         <Elements />
