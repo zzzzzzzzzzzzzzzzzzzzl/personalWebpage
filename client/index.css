@@ -1,17 +1,19 @@
 body,
 html {
   margin: 0px;
-  background-color: rgb(60, 60, 60);
+  background-color: rgb(60, 60, 67);
   color: #f5f5f5;
   font-family: 'Courier New', monospace;
   height: 100%;
 }
 
 .topNav {
+  width: 100%;
+  position: absolute;
   display: flex;
   justify-content: center; /* Spacing items evenly */
   align-items: center; /* Center items vertically */
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(80, 80, 87);
 }
 
 .bottomNav {
@@ -29,4 +31,77 @@ html {
 }
 .content {
   padding: 100px;
+}
+
+.aboutDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutDetailsItem {
+  background-color: rgb(30, 30, 30);
+  margin: 10px;
+}
+.educationDetails {
+  display: flex;
+
+  margin: 10px;
+}
+
+.educationContainer {
+  border-radius: 10px;
+  background-color: rgb(70, 70, 82);
+  margin: 20px;
+}
+.educationItem {
+  padding-right: 30%;
+  white-space: nowrap;
+}
+.skills {
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(3, 1fr); /* Three rows */
+  gap: 50px;
+  padding: 20px;
+}
+.skillItem {
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+}
+.skillSVG {
+  width: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #3498db;
+}
+.centerdDiv {
+  display: flex;
+  justify-content: center;
+}
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+.skillsContainerItem {
+  background-color: rgb(22, 22, 22);
+  border-radius: 5px;
+  flex: 1 1 calc(33.33% - 10px);
+  padding: 4px;
+  margin: 2px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.school {
+  float: left;
+  font-size: 18px;
+}
+.degree {
+  font-size: 18px;
 }

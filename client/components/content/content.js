@@ -1,12 +1,11 @@
 import { useAppSelector } from '../../hooks'
-import { About } from './about'
+import { About } from './about/about'
 import { Contact } from './contact'
-import { Education } from './education'
-import { Experience } from './experience'
+import { Education } from './education/education'
+import { Experience } from './experience/experience'
 
 export function Content() {
   const display = useAppSelector((state) => state.slice.display)
-  console.log(display)
   let componentToRender
   switch (display) {
     case 'About':
@@ -27,8 +26,7 @@ export function Content() {
   }
 
   return (
-    <div className="content">
-      here is some content
+    <div className="content" style={{ padding: '100px' }}>
       {componentToRender}
     </div>
   )
