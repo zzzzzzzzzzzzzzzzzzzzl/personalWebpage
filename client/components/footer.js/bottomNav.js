@@ -1,4 +1,4 @@
-const items = ['fuckin footer']
+const items = ['footer']
 
 function NavItem(props) {
   return <div className="navItem">{props.name}</div>
