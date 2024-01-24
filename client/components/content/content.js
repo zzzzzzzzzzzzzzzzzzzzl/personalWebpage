@@ -1,6 +1,6 @@
 import { useAppSelector } from '../../hooks'
 import { About } from './about/about'
-import { Contact } from './contact'
+import { Contact } from './contact/contact'
 import { Education } from './education/education'
 import { Experience } from './experience/experience'
 

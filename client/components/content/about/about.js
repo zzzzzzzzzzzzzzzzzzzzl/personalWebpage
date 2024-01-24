@@ -1,20 +1,67 @@
 import { SkillsGrid } from './skillsGrid'
-
 import me from './me.jpg'
-
-function AboutDetails() {
-  return (
-    <div>
-      <div> I'm James Edwards</div>
-      <div>Senior Web Engineer @ Viu</div>
-      <div className="aboutDetails">
-        <div className="aboutDetailsItem"> Download CV</div>
-        <div className="aboutDetailsItem"> LinkedIn</div>
-        <div className="aboutDetailsItem"> GitHub</div>
-      </div>
-    </div>
-  )
+import React from 'react'
+function changeUrl() {
+  console.log('hssssere')
+  // window.location.href = 'cv.pdf'
 }
+
+class AboutDetails extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div>
+        <div> I'm James Edwards</div>
+        <div>Juniour Web Dev</div>
+        <div className="aboutDetails">
+          <AboutDetailsItem name="CV" link="cv.pdf" />
+          <AboutDetailsItem
+            name="Linkden"
+            link="https://www.linkedin.com/in/james-edwards-692a08273/"
+          />
+          <AboutDetailsItem
+            name="github"
+            link="https://github.com/zzzzzzzzzzzzzzzzzzzzl"
+          />
+        </div>
+      </div>
+    )
+  }
+}
+
+class AboutDetailsItem extends React.Component {
+  handleClick = () => {
+    window.location.href = this.props.link
+  }
+
+  render() {
+    return (
+      <div className="aboutDetailsItem" onClick={this.handleClick}>
+        {' '}
+        {this.props.name}
+      </div>
+    )
+  }
+}
+
+// function AboutDetails() {
+//   return (
+//     <div>
+//       <div> I'm James Edwards</div>
+//       <div>Juniour Web Dev</div>
+//       <div className="aboutDetails">
+//         <div className="aboutDetailsItem" onClick={changeUrl()}>
+//           CV
+//         </div>
+//         <div className="aboutDetailsItem"> LinkedIn</div>
+//         <div className="aboutDetailsItem"> GitHub</div>
+//       </div>
+//     </div>
+//   )
+// }
 function MeImg() {
   return (
     <div style={{ paddingBottom: '50px', paddingTop: '150px' }}>
@@ -26,7 +73,7 @@ function MeImg() {
 export function About() {
   return (
     <div>
-      <AboutDetails />
+      <AboutDetails name="oogabooaga" />
       <MeImg />
       <SkillsGrid />
     </div>

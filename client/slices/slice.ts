@@ -4,7 +4,7 @@ import { RootState } from '../store'
 export const slice = createSlice({
   name: 'slice',
   initialState: {
-    display: 'Experience',
+    display: 'Contact',
   },
 
   reducers: {
