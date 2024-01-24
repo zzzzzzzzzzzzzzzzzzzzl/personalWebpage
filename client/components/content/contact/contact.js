@@ -4,7 +4,7 @@ import { contactObj } from './contactObj'
 function Info(props) {
   const obj = contactObj[props.name]
   return (
-    <div style={{ padding: '5px' }}>
+    <div style={{ padding: '5px', backgroundColor: '' }}>
       <div
         style={{
           backgroundColor: ' #3498db',
