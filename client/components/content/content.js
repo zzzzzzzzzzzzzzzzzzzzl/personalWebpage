@@ -6,28 +6,25 @@ import { Experience } from './experience/experience'
 
 export function Content() {
   const display = useAppSelector((state) => state.slice.display)
-  let componentToRender
-  switch (display) {
-    case 'About':
-      componentToRender = <About />
-      break
-    case 'Experience':
-      componentToRender = <Experience />
-      break
-    case 'Education':
-      componentToRender = <Education />
-      break
-    case 'Contact':
-      componentToRender = <Contact />
-      break
-    default:
-      componentToRender = <About />
-      break
-  }
 
   return (
     <div className="content" style={{ padding: '100px' }}>
-      {componentToRender}
+      <div className='about'>
+       <About  />
+        
+      </div >
+      <div className='experience'>
+      <Experience />
+        
+      </div>
+      <div className='education'>
+       <Education />
+        
+      </div>
+      <div className='contact'>
+        
+       <Contact />
+      </div>
     </div>
   )
 }

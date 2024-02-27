@@ -1,6 +1,7 @@
 import { SkillsGrid } from './skillsGrid'
 import me from './me.jpg'
 import React from 'react'
+
 function changeUrl() {
   console.log('hssssere')
   // window.location.href = 'cv.pdf'
@@ -15,7 +16,7 @@ class AboutDetails extends React.Component {
     return (
       <div>
         <div> I'm James Edwards</div>
-        <div>Juniour Web Dev</div>
+        <div>Web Dev</div>
         <div className="aboutDetails">
           <AboutDetailsItem name="CV" link="cv.pdf" />
           <AboutDetailsItem

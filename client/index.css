@@ -10,7 +10,7 @@ html {
 
 .topNav {
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center; /* Spacing items evenly */
   align-items: center; /* Center items vertically */
@@ -18,10 +18,13 @@ html {
 }
 
 .bottomNav {
-  display: flex;
-  justify-content: center; /* Spacing items evenly */
-  align-items: center; /* Center items vertically */
   background-color: rgb(80, 80, 80);
+
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .navItem {
